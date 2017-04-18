@@ -1,0 +1,17 @@
+/*
+  1.) creating a counter variable for storing the calculated value.
+  2.) calculating the value and storing it to the counter variable by this loop
+  3.) returning the calculated value
+*/
+
+function factorialize(num) {
+  var counter = 1; // (1)
+
+  for(var i = 0; i < num; i++) {        //
+     counter = counter + (counter * i); //  (2)
+  }                                     //
+
+  return counter; // (3)
+}
+
+factorialize(0);

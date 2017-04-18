@@ -1,0 +1,27 @@
+/* 1.) first I'm creating an empty array for the modification of the given string.
+   2.) spliting the string.
+   3.) adding the first letter of the given string to the 'newArr'.
+   4.) looping through the 'str' and checking for the spaces.
+       if the current item is a space then it will change the next letter to an uppercase letter.
+   5.) adding the modified letters to the 'newArr'.
+   6.) printing the modified string after joining the items from 'newArr'.
+*/
+
+function titleCase(str) {
+   var newArr = []; // array for the modified string
+   str = str.toLowerCase().split(''); // spliting the string to an array
+   newArr.push(str[0].toUpperCase()); //the first letter of the string
+   
+  for(var i = 1; i < str.length; i++) {
+      
+     if(str[i] === ' ') {                     //
+       str[i + 1] = str[i + 1].toUpperCase(); //space checker
+     }                                        //
+    
+     newArr.push(str[i]);
+  }
+  
+    return newArr.join('');// this will be the modified string
+}
+
+titleCase("sHoRt AnD sToUt");
